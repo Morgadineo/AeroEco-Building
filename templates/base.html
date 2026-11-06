@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+        name="description"
+        content="Portal de conscientização e ação ambiental. Informação, iniciativas sustentáveis e impacto positivo para o nosso planeta."
+    >
+    <meta name="theme-color" content="#1b4332">
+
+    <title>{% block title %}AeroEco Building | Conscientização e Sustentabilidade{% endblock %}</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/protótipo.css') }}"
+    >
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+        defer
+    ></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo-principal">
+        Pular para o conteúdo principal
+    </a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a
+                class="brand"
+                href="{{ url_for('index') }}"
+                aria-label="Aero Eco-Building, página inicial"
+            >
+                <span class="brand-mark" aria-hidden="true">🌱</span>
+                <span>AeroEco<span class="brand-highlight">Building</span></span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-controls="menu-principal"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav
+                class="main-nav"
+                id="menu-principal"
+                aria-label="Navegação principal"
+            >
+                <a href="{{ url_for('index') }}#inicio">Início</a>
+                <a href="{{ url_for('index') }}#sobre">Sobre a Causa</a>
+                <a href="{{ url_for('index') }}#pilares">Nossos Pilares</a>
+                <a href="{{ url_for('index') }}#projetos">Projetos & Ações</a>
+                <a href="{{ url_for('index') }}#dicas">Guia Verde</a>
+                <a class="nav-contact" href="{{ url_for('index') }}#participe">
+                    Junte-se a nós <span aria-hidden="true">↗</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <div
+            class="flash-container container"
+            id="mensagens-flash"
+            aria-label="Mensagens do sistema"
+        >
+            {% with mensagens = get_flashed_messages(with_categories=true) %}
+                {% if mensagens %}
+                    {% for categoria, mensagem in mensagens %}
+                        <div
+                            class="flash-message flash-{{ categoria }}"
+                            role="status"
+                        >
+                            <p>{{ mensagem }}</p>
+                            <button
+                                class="flash-close"
+                                type="button"
+                                aria-label="Fechar mensagem"
+                            >×</button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-main">
+            <div class="footer-brand">
+                <a class="brand" href="{{ url_for('index') }}#inicio">
+                    <span class="brand-mark" aria-hidden="true">🌱</span>
+                    <span>AeroEco<span class="brand-highlight">Building</span></span>
+                </a>
+                <p>
+                    Promovendo a conscientização, a preservação do meio ambiente 
+                    e ações práticas para um futuro sustentável.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2>Explorar</h2>
+                <a href="{{ url_for('index') }}#sobre">Nossa Missão</a>
+                <a href="{{ url_for('index') }}#projetos">Projetos</a>
+                <a href="{{ url_for('index') }}#dicas">Dicas Sustentáveis</a>
+                <a href="{{ url_for('index') }}#participe">Como Ajudar</a>
+            </div>
+
+            <div class="footer-links">
+                <h2>Redes & Contato</h2>
+                <a
+                    href="https://instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Instagram ↗</a>
+                <a
+                    href="https://youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >YouTube ↗</a>
+                <a href="mailto:aero_eco_building@gmail.org">E-mail ↗</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© <span id="ano-atual">{{ ano }}</span> Projeto Aero Eco Building.</p>
+            <p>Pelo futuro de um mundo sustentável <span class="footer-heart" aria-label="planeta">🌍</span></p>
+        </div>
+    </footer>
+</body>
+</html>

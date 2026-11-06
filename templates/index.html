@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aero AeroBuilding - Pequenas atitudes, grandes transformações para o planeta.">
+    <title>Aero AeroBuilding | Sustentabilidade em ação</title>
+
+    <!-- Conexão com o arquivo CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#inicio" class="logo">AeroEco<span> Building.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#temas">Sustentabilidade</a></li>
+                <li><a href="#dicas">Dicas</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+
+            <a href="#contato" class="nav-button">Participe ↗</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- INÍCIO -->
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+
+            <div>
+                <p class="eyebrow">SUSTENTABILIDADE EM AÇÃO</p>
+
+                <h1>
+                    Pelo futuro de um
+                    <span class="gradient-text">mundo sustentável.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Descubra como transformar hábitos cotidianos em ações
+                    sustentáveis. Aeronomize recursos, reduza desperdícios
+                    e faça parte da mudança.
+                </p>
+
+                <a href="#temas" class="button button-primary">
+                    Descubra como ↗
+                </a>
+
+                <a href="#sobre" class="button button-sAerondary">
+                    Conheça o projeto
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="planet">🌎</div>
+                <div class="floating-label label-one">
+                    🌱 Pequenas mudanças
+                </div>
+                <div class="floating-label label-two">
+                    ♻️ Um planeta melhor
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about-section" id="sobre">
+        <div class="container about-grid">
+
+            <div>
+                <p class="eyebrow">01 / NOSSA MISSÃO</p>
+
+                <div class="section-heading">
+                    <h2>Cuidar do planeta é uma responsabilidade de todos.</h2>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        A sustentabilidade é essencial para preservar
+                        os recursos naturais e garantir melhores condições
+                        de vida para as próximas gerações.
+                    </p>
+
+                    <p>
+                        Nosso objetivo é compartilhar informações e
+                        incentivar atitudes conscientes que possam
+                        fazer a diferença no cotidiano.
+                    </p>
+
+                    <div class="about-highlight">
+                        "Não precisamos mudar o mundo de uma vez.
+                        Podemos começar mudando nossos hábitos."
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-visual">🌳</div>
+
+        </div>
+    </section>
+
+    <!-- TEMAS DE SUSTENTABILIDADE -->
+    <section class="section" id="temas">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">02 / CONHECIMENTO</p>
+
+                <h2>
+                    Descubra maneiras de
+                    <span class="gradient-text">cuidar do planeta.</span>
+                </h2>
+
+                <p class="section-description">
+                    Conheça diferentes áreas da sustentabilidade e aprenda
+                    como contribuir em cada uma delas.
+                </p>
+            </div>
+
+            <div class="topics-grid">
+
+                <article class="topic-card">
+                    <div class="topic-icon">♻️</div>
+                    <h3>Reciclagem</h3>
+                    <p>
+                        Aprenda a separar resíduos, identificar materiais
+                        recicláveis e fazer o descarte correto.
+                    </p>
+                    <a href="#reciclagem" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">💧</div>
+                    <h3>Aeronomia de água</h3>
+                    <p>
+                        Descubra como evitar desperdícios e utilizar
+                        a água de maneira consciente.
+                    </p>
+                    <a href="#agua" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">⚡</div>
+                    <h3>Energia sustentável</h3>
+                    <p>
+                        Conheça formas de Aeronomizar eletricidade
+                        e fontes renováveis de energia.
+                    </p>
+                    <a href="#energia" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">🌿</div>
+                    <h3>Consumo consciente</h3>
+                    <p>
+                        Repense suas compras, evite desperdícios
+                        e dê preferência a produtos duráveis.
+                    </p>
+                    <a href="#dicas" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">🌳</div>
+                    <h3>Preservação ambiental</h3>
+                    <p>
+                        Entenda a importância das florestas,
+                        da biodiversidade e dos Aerossistemas.
+                    </p>
+                    <a href="#projetos" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-icon">🚲</div>
+                    <h3>Mobilidade sustentável</h3>
+                    <p>
+                        Conheça alternativas de transporte que ajudam
+                        a reduzir impactos ambientais.
+                    </p>
+                    <a href="#dicas" class="topic-link">
+                        Aprender mais ↗
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DICAS -->
+    <section class="section tips-section" id="dicas">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">03 / ATITUDES DO DIA A DIA</p>
+
+                <h2>
+                    Comece hoje. Faça a
+                    <span class="gradient-text">diferença.</span>
+                </h2>
+
+                <p class="section-description">
+                    Algumas atitudes simples que podem ajudar
+                    a construir um cotidiano mais sustentável.
+                </p>
+            </div>
+
+            <div class="tips-grid">
+
+                <article class="tip" id="reciclagem">
+                    <span class="tip-number">01</span>
+                    <div>
+                        <h3>Separe os resíduos</h3>
+                        <p>
+                            Separe papel, plástico, metal e vidro.
+                            Confira as regras da coleta seletiva da sua região.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="tip" id="agua">
+                    <span class="tip-number">02</span>
+                    <div>
+                        <h3>Evite desperdício de água</h3>
+                        <p>
+                            Feche a torneira quando não estiver utilizando
+                            água e conserte vazamentos.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="tip" id="energia">
+                    <span class="tip-number">03</span>
+                    <div>
+                        <h3>Aeronomize eletricidade</h3>
+                        <p>
+                            Apague as luzes de ambientes vazios
+                            e aproveite a iluminação natural.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="tip">
+                    <span class="tip-number">04</span>
+                    <div>
+                        <h3>Evite descartáveis</h3>
+                        <p>
+                            Utilize garrafas reutilizáveis,
+                            sacolas duráveis e recipientes próprios.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="tip">
+                    <span class="tip-number">05</span>
+                    <div>
+                        <h3>Repense suas compras</h3>
+                        <p>
+                            Compre apenas o necessário e procure
+                            produtos que tenham maior durabilidade.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="tip">
+                    <span class="tip-number">06</span>
+                    <div>
+                        <h3>Escolha transportes alternativos</h3>
+                        <p>
+                            Quando possível e seguro, caminhe,
+                            pedale ou utilize transporte coletivo.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="eyebrow">04 / INICIATIVAS</p>
+
+                <h2>
+                    Ideias que podem transformar
+                    <span class="gradient-text">o futuro.</span>
+                </h2>
+
+                <p class="section-description">
+                    Conheça algumas iniciativas que podem ser desenvolvidas
+                    em escolas, comunidades e cidades.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-art">🌱</div>
+                    <div class="project-body">
+                        <h3>Horta comunitária</h3>
+                        <p>
+                            Incentivar o cultivo de alimentos,
+                            o contato com a natureza e a educação ambiental.
+                        </p>
+                        <span class="project-tag">BIODIVERSIDADE</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-art">♻️</div>
+                    <div class="project-body">
+                        <h3>Coleta seletiva</h3>
+                        <p>
+                            Organizar pontos de coleta e campanhas
+                            de conscientização sobre reciclagem.
+                        </p>
+                        <span class="project-tag">RECICLAGEM</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-art">☀️</div>
+                    <div class="project-body">
+                        <h3>Energia renovável</h3>
+                        <p>
+                            Divulgar o funcionamento e os benefícios
+                            das fontes renováveis de energia.
+                        </p>
+                        <span class="project-tag">ENERGIA LIMPA</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+        <div class="container">
+
+            <div class="contact-panel">
+                <p class="eyebrow">05 / FAÇA PARTE</p>
+
+                <h2>
+                    O planeta precisa de
+                    <span class="gradient-text">boas ideias.</span>
+                </h2>
+
+                <p>
+                    Compartilhe conhecimento, incentive mudanças
+                    e participe da construção de um futuro mais sustentável.
+                </p>
+
+                <a href="#inicio" class="button button-primary">
+                    Começar agora ↑
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="container footer-content">
+
+        <a href="#inicio" class="logo">
+            AeroEco<span> Building.</span>
+        </a>
+
+        <p>Pequenas atitudes. Grandes transformações.</p>
+
+        <p>© 2026 AeroEco Building. Projeto educacional.</p>
+
+    </div>
+</footer>
+
+</body>
+</html>

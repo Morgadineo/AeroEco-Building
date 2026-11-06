@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Página não encontrada | Alex Ribeiro{% endblock %}
+
+{% block content %}
+<section class="error-section section" aria-labelledby="erro-titulo">
+    <div class="container error-content">
+        <div class="error-code" aria-hidden="true">404</div>
+
+        <p class="eyebrow">OPS! CAMINHO NÃO ENCONTRADO</p>
+
+        <h1 id="erro-titulo">
+            Parece que esta página
+            <span class="gradient-text">pegou outro caminho.</span>
+        </h1>
+
+        <p class="section-description">
+            O endereço pode estar incorreto ou a página pode não existir.
+            Que tal voltar ao início e explorar o portfólio?
+        </p>
+
+        <a class="button button-primary" href="{{ url_for('index') }}">
+            Voltar ao início <span aria-hidden="true">↗</span>
+        </a>
+    </div>
+</section>
+{% endblock %}
